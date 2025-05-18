@@ -220,7 +220,7 @@
             <div class="preloader"></div>
             <header class="header-page">
                 <div class="header-page__inner container">
-                    <a href="/" class="header-page__logo logo">
+                    <a href="/TechHub/" class="header-page__logo logo">
                         <img src="./icons/logo.svg" alt="Logo image">
                     </a>
                     <nav class="header-page__nav navigation" data-navigation>
