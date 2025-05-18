@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/scss/main.css">
-    <!-- <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
-    <link src="./node_modules/swiper/swiper-bundle.min.css"></link> -->
     <script src="./src/js/main.js" type="module"></script>
     <title>Смартфоны</title>
 </head>
@@ -14,13 +12,13 @@
     <header class="header">
         <div class="header__inner container">
             <a href="/" class="header__logo logo">
-                <img src="/icons/logo.svg" alt="Logo image">
+                <img src="/public/icons/logo.svg" alt="Logo image">
             </a>
             <div class="header__search search">
                 <form>
                     <label class="visually-hidden" for="dataSearch">Поиск товара</label>
                     <input type="search" placeholder="Поиск товара" class="search__input" id="dataSearch" data-local-search>
-                    <img class="search__input-icon" src="/icons/search.svg" alt="Search Icon">
+                    <img class="search__input-icon" src="/public/icons/search.svg" alt="Search Icon">
                 </form>
             </div>
             <nav class="header__nav navigation" data-navigation>
@@ -28,17 +26,17 @@
                 </button>
                 
                 <button class="header__nav-button compare-button" id="compareButton">
-                    <img src="/icons/compare.svg" alt="Кнопка открытия сравнения товаров">
+                    <img src="/public/icons/compare.svg" alt="Кнопка открытия сравнения товаров">
                     <span class="compare-button__current-items visually-hidden" data-current-items-compare></span>
                 </button>
                 
                 <button class="header__nav-button favourite-button" id="favouritesButton">
-                    <img src="/icons/favourites.svg" alt="Кнопка открытия избранных товаров">
+                    <img src="/public/icons/favourites.svg" alt="Кнопка открытия избранных товаров">
                     <span class="favourite-button__current-items visually-hidden" data-current-items-favourites></span>
                 </button>
     
                 <button class="header__nav-button cart-button" id="cartButton">
-                    <img src="/icons/cart.svg" alt="Кнопка открытия корзины товаров">
+                    <img src="/public/icons/cart.svg" alt="Кнопка открытия корзины товаров">
                     <span class="cart-button__current-items visually-hidden" data-current-items-cart></span>
                 </button>
             </nav>
@@ -54,7 +52,7 @@
             <div class="cart__empty" id="cartEmpty">
                 <div class="empty">
                     <p class="empty__title">Ваша корзина пустая</p>
-                    <img class="empty__image" src="/gif/icons8-empty-cart.gif" alt="List is empty">
+                    <img class="empty__image" src="/public/gif/icons8-empty-cart.gif" alt="List is empty">
                 </div>
             </div>
 
@@ -81,7 +79,7 @@
             <div class="compare__empty" data-compare-empty>
                 <div class="empty">
                     <p class="empty__title">Добавьте товары в сравнение</p>
-                    <img class="empty__image" src="/gif/icons8-list-is-empty.gif" alt="List is empty">
+                    <img class="empty__image" src="/public/gif/icons8-list-is-empty.gif" alt="List is empty">
                 </div>
             </div>
             
@@ -109,7 +107,7 @@
             <div class="favourites__empty" id="favouritesEmpty">
                 <div class="empty">
                     <p class="empty__title">В списке избранного ничего нет</p>
-                    <img class="empty__image" src="/gif/icons8-heart.gif" alt="List is empty">
+                    <img class="empty__image" src="/public/gif/icons8-heart.gif" alt="List is empty">
                 </div>
             </div>
 
@@ -160,13 +158,6 @@
                                 <span>Очистить все</span>
                             </button>
                         </div>
-                        <!-- <div class="filters__search search search--local">
-                            <form>
-                                <label class="visually-hidden" for="dataLocalSearch">Локальный поиск товара</label>
-                                <input type="search" placeholder="Поиск" class="search__input" data-local-search>
-                                <img class="search__input-icon" src="/icons/search.svg" alt="Search Icon">
-                            </form>
-                        </div> -->
                         <ul class="filters__list-inner" data-filter-container>
                         </ul>
                     </div>
@@ -182,7 +173,7 @@
                         <div class="products__empty" data-products-empty>
                             <div class="empty">
                                 <p class="empty__title">Товаров с выбранными фильтрыми нет</p>
-                                <img class="empty__image" src="/gif/icons8-list-is-empty.gif" alt="List is empty">
+                                <img class="empty__image" src="/public/gif/icons8-list-is-empty.gif" alt="List is empty">
                             </div> 
                         </div>
                         <div class="products__list-inner">
@@ -192,12 +183,12 @@
                         
                         <div class="products__pagination pagination">
                             <button class="pagination__button-prev">
-                                <img src="/icons/arrow-left.svg" alt="Arrow left" data-button-prev>
+                                <img src="/public/icons/arrow-left.svg" alt="Arrow left" data-button-prev>
                             </button>
                             <ul class="pagination__list" data-pagination>
                             </ul>
                             <button class="pagination__button-next" data-button-next>
-                                <img src="/icons/arrow-right.svg" alt="Arrow right">
+                                <img src="/public/icons/arrow-right.svg" alt="Arrow right">
                             </button>
                         </div>
                     </div>
@@ -209,37 +200,37 @@
         <div class="footer__hero">
             <div class="footer__hero-inner container">
                 <a href="/" class="footer__logo logo">
-                    <img src="/icons/logo.svg" alt="Logo image">
+                    <img src="/public/icons/logo.svg" alt="Logo image">
                 </a>
                 <ul class="footer__soc1als-list soc1als">
                     <li class="soc1als__item">
                         <a href="" class="soc1als__link">
-                            <img src="/icons/icons8-youtube.svg" alt="Facebook">
+                            <img src="/public/icons/icons8-youtube.svg" alt="Facebook">
                         </a>
                     </li>
                     <li class="soc1als__item">
                         <a href="" class="soc1als__link">
-                            <img src="/icons/icons8-vk-circled.svg" alt="Facebook">
+                            <img src="/public/icons/icons8-vk-circled.svg" alt="Facebook">
                         </a>
                     </li>
                     <li class="soc1als__item">
                         <a href="" class="soc1als__link">
-                            <img src="/icons/icons8-twitter-circled.svg" alt="Facebook">
+                            <img src="/public/icons/icons8-twitter-circled.svg" alt="Facebook">
                         </a>
                     </li>
                     <li class="soc1als__item">
                         <a href="" class="soc1als__link">
-                            <img src="/icons/icons8-facebook-circled.svg" alt="Facebook">
+                            <img src="/public/icons/icons8-facebook-circled.svg" alt="Facebook">
                         </a>
                     </li>
                     <li class="soc1als__item">
                         <a href="" class="soc1als__link">
-                            <img src="/icons/icons8-github.svg" alt="Facebook">
+                            <img src="/public/icons/icons8-github.svg" alt="Facebook">
                         </a>
                     </li>
                     <li class="soc1als__item">
                         <a href="" class="soc1als__link">
-                            <img src="/icons/icons8-instagram.svg" alt="Facebook">
+                            <img src="/public/icons/icons8-instagram.svg" alt="Facebook">
                         </a>
                     </li>
                 </ul>
@@ -348,7 +339,7 @@
             <li class="mobile-overlay__item item-block">
                 <div class="mobile-overlay__filters" data-collapse="close">
                     <div class="mobile-overlay__filters-title" data-collapse-heading>
-                        <img src="/icons/filters.svg" alt="Filters icon">
+                        <img src="/public/icons/filters.svg" alt="Filters icon">
                     </div>
                     <div class="mobile-overlay__filters-body" data-collapse-content data-mobile-filter-container></div>
                 </div>

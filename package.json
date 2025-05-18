@@ -1,5 +1,5 @@
 {
-  "name": "techhub",
+  "name": "techub",
   "homepage": "https://cyan1dealex.github.io/TechHub/",
   "private": true,
   "version": "0.0.0",
@@ -12,11 +12,11 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.86.3",
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "photoswipe": "^5.4.4",
     "swiper": "^11.2.6"
   }

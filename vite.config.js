@@ -1,13 +1,13 @@
-// vite.config.js
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '/TechHub/',
-    build: {
-        outDir: 'dist',   // Папка сборки (по умолчанию 'dist')
-        emptyOutDir: true,    // Очищать папку перед сборкой
-    },
-    server: {
-        open: true,
-    },
+  build: {
+    assetsDir: 'assets', // Убедитесь, что это указано
+
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]'
+      }
+    }
+  }
 })
