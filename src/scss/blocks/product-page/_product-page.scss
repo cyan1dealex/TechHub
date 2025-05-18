@@ -1,0 +1,98 @@
+@use '../../helpers' as *;
+
+.product-page {
+    margin-top: rem(40);
+    background-color: var(--color-light-gray);
+
+    &__main {
+        display: flex;
+        column-gap: rem(30);
+
+        @include tablet {
+            flex-direction: column-reverse;
+            row-gap: rem(30);
+            align-items: center;
+        }
+    }
+
+    &__gallery {
+        @include tablet {
+            max-width: 100% !important;
+        }
+    }
+
+    &__inner {
+        background-color: var(--color-light-gray);
+        padding: rem(40);
+        border-radius: var(--border-radius-mixed-top);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(60);
+
+        @include tablet {
+            row-gap: rem(30);
+        }
+
+        @include mobile {
+            padding: rem(20);
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(30);
+            max-width: 100%;
+        }
+    }
+
+    &__info-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+    }
+
+    &__info-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(6);
+    }
+
+    &__info-item {
+        p {
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__nav {
+        border-radius: var(--border-radius);
+        background-color: var(--color-light);
+        padding: rem(30) rem(40);
+        box-shadow: 0px 0px 24px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+
+        @include mobile {
+            align-self: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        &-buttons {
+            align-self: center;
+            margin-top: auto;
+        }
+    }
+
+    &__price {
+        font-size: rem(44);
+        font-weight: 600;
+    }
+}

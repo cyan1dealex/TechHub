@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+
+.soc1als {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(6);
+
+    &__item {
+        height: rem(64);
+    }
+
+    &__link {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @include hover {
+            img {
+                filter: invert(1);
+            }
+        }
+        
+        img {
+            @include square(rem(38));
+            filter: invert(0.7);
+            transition-duration: var(--transition-duration);
+        }
+    }
+}

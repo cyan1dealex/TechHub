@@ -1,0 +1,86 @@
+@use '../helpers' as *;
+
+.cart-item {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        justify-content: start;
+        column-gap: rem(20);
+        background-color: var(--color-light-gray);
+        border-radius: var(--border-radius);
+        padding: rem(20);
+        height: rem(160);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(20);
+            height: auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        max-width: 70%;
+
+        @include mobile {
+            row-gap: rem(10);
+        }
+    }
+
+    &__link {
+        font-size: rem(16);
+        color: var(--color-link);
+        text-decoration: none;
+    }
+
+    &__counter {
+        margin-top: auto;
+    }
+
+    &__title {
+        font-size: rem(18);
+        font-weight: 600;
+        white-space: wrap;
+    }
+
+    &__image-container {
+        @include square(rem(120));
+        padding: rem(10);
+        background-color: var(--color-light);
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        align-self: center;
+
+        img {
+            display: block;
+            margin: auto;
+            width: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        right: fluid(20, 0);
+        bottom: rem(20);
+        width: rem(140);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-size: rem(26);
+        }
+    }
+
+    & .close {
+        right: rem(12);
+        top: rem(12);
+    }
+}

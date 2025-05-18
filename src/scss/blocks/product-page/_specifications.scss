@@ -1,0 +1,65 @@
+@use "../../helpers" as *;
+
+.specifications {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: rem(20);
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__title {
+        font-size: rem(20);
+        font-weight: 500;
+        padding-block: rem(16);
+        padding-inline: rem(16);
+        background-color: var(--color-light-gray);
+        border-radius: var(--border-radius);
+    }
+
+    &__table {
+        width: 100%;
+
+        tr {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-block: rem(4);
+
+            &:not(:first-child) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-color: var(--color-gray);
+                    opacity: .1;
+                    width: 100%;
+                    height: rem(1);
+                }
+            }
+
+            td {
+                &:last-child {
+                    @include tablet {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        td {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: rem(10);
+
+            &:first-child {
+                font-weight: 600;
+            }
+        }
+    }
+}

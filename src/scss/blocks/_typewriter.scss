@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.typewriter {
+    span {
+        color: var(--color-accent);
+        opacity: 0.6;
+        font-size: fluid(60, 20);
+        font-weight: 600;
+        overflow: hidden;
+        border-right: .10em solid var(--color-accent);
+        animation: blink-caret .75s step-end infinite;
+        padding-right: rem(10);
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+  /* Анимация мигающего курсора */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-accent); }
+}

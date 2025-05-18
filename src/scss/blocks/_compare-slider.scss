@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.compare-slider {
+    position: relative;
+}
+
+.swiper {
+    padding-inline: rem(20);
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+.compare-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+	&__price {
+        font-size: 24px;
+        margin-top: 10px;
+	}
+}

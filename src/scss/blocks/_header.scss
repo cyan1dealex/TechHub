@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+
+@keyframes scrolling-header {
+    to {
+        background-color: #d8d8d8;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.header, .header-page {
+    // Анимация при скролле
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    &__logo {
+        z-index: 100;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(4);
+        padding: rem(20) rem(30);
+        max-width: var(--header-width);
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: var(--header-width);
+            height: 100%;
+            background-color: var(--color-light);
+            border-radius: var(--border-radius-mixed-bottom);
+    
+            animation-name: scrolling-header;
+            animation-fill-mode: both;
+            animation-timeline: scroll();
+            animation-range: 0 200px;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+
+    // Контейнер для localsearch (центрированный)
+    &__search {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include mobile-s {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    // Контейнер для навигации (справа)
+    &__nav {
+        display: flex;
+        column-gap: rem(4);
+        margin-left: auto; // Сдвигает nav вправо
+    }
+
+    &__nav-button {
+        @include square(52px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

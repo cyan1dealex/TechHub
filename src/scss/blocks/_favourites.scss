@@ -1,0 +1,71 @@
+@use "./../helpers" as *;
+
+.favourites {
+    --cart-width: #{rem(650)};
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: calc(var(--cart-width) * -1);
+    transition: right .4s ease-out;
+    width: var(--cart-width);
+    height: 100vh;
+    padding-inline: rem(24);
+    background-color: var(--color-light);
+
+    @include mobile {
+        width: 100%;
+        right: -100%;
+    }
+    
+    &.is-active {
+        right: 0;
+    }
+    
+    &__empty {
+        display: none;
+        height: 100%;
+        
+        &.is-active {
+            display: flex;
+            font-size: rem(30);
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__inner {
+        right: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    &__title {
+        font-size: rem(30);
+        font-weight: 600;
+        padding-block: rem(20);
+    }
+
+    &__order-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        flex-grow: 1;
+        padding-right: rem(10);
+        overflow-y: auto;
+        max-height: 86vh;
+        row-gap: rem(20);
+    }
+}

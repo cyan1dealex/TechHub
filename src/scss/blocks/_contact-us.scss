@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.contact-us {
+    color: var(--color-light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(12);
+
+    @include mobile-s {
+        flex-direction: column;
+        row-gap: rem(10);
+    }
+
+    &__title {
+        font-size: rem(16);
+    }
+
+    &__input-block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        color: var(--color-light);
+        width: 100%;
+        height: var(--input-height);
+        border: 1px solid var(--color-accent);
+        border-radius: rem(10) 0 0 rem(10);
+        padding-left: rem(12);
+        background: transparent;
+        caret-color: var(--color-light-gray);
+
+        @include hover {
+            border-color: var(--color-light-gray);
+        }
+    }
+
+    &__button {
+        height: var(--input-height);
+        color: var(--color-light);
+        border-radius: 0 rem(10) rem(10) 0;
+        padding-inline: rem(20);
+        font-size: rem(16);
+        background-color: var(--color-cart-button);
+        box-shadow: #{rem(0)} #{rem(0)} #{rem(16)} #{rem(8)} rgba(255, 0, 0, 0.3);
+
+        @include mobile {
+            padding-inline: rem(10);
+        }
+
+        @include hover {
+            background-color: #ff0000;
+        }
+    }
+}

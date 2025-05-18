@@ -1,0 +1,489 @@
+@use '../helpers' as *;
+
+@keyframes scrolling-header-dark-theme {
+    to {
+        background-color: #121212ea;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+body.dark-theme {
+    --dark-theme-color-dark: #121212;        /* Основной фон */
+    --dark-theme-color-dark-gray: #2b2b2b;   /* Шапка, карточки, блоки */
+    --dark-theme-color-darker-gray: #1d1d1d;   /* Шапка, карточки, блоки */
+    --dark-theme-color-gray: #969696;        /* Второстепенный текст */
+    --dark-theme-color-light: #cfcfcf;       /* Основной текст, иконки */
+    --dark-theme-color-active: #6694d8;      /* Акцентные элементы (кнопки, выделение) */
+
+    &::-webkit-scrollbar-track {
+        background: var(--dark-theme-color-gray);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--dark-theme-color-darker-gray);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--dark-theme-color-dark);
+    }
+
+    color: var(--dark-theme-color-gray);
+    background-image: var(--color-bg);
+
+    .header, .header-page {
+        &__inner {
+            &::before {
+                background-color: var(--dark-theme-color-dark);
+        
+                animation-name: scrolling-header-dark-theme;
+                animation-fill-mode: both;
+                animation-timeline: scroll();
+                animation-range: 0 200px;
+            }
+        }
+
+        &__logo {
+            img {
+                filter: brightness(0) invert(0.8);
+            }
+        }
+    }
+
+    .shop {
+        &__header {
+            background-color: var(--dark-theme-color-dark);
+
+            &-title {
+                color: var(--dark-theme-color-light);
+            }
+        }
+
+        &__body {
+            background-color: var(--dark-theme-color-dark);
+        }
+    }
+
+    .product-card {
+        background-color: var(--dark-theme-color-dark-gray);
+
+        &__title {
+            color: var(--dark-theme-color-light);
+
+            @include hover {
+                color: #fff;
+            }
+        }
+
+        &__price {
+            color: var(--dark-theme-color-light);
+        }
+
+        &__image {
+            background-color: var(--dark-theme-color-gray);
+
+            &-body {
+                background-color: var(--dark-theme-color-gray);
+            }
+
+            img {
+                @include square(#{rem(200)});
+                border: 10px solid #fff;
+                border-radius: var(--border-radius);
+                background-color: #fff;
+            }
+        }
+    }
+
+    .add-to-cart-button {
+        &.disabled {
+            background-color: var(--dark-theme-color-gray);
+            box-shadow: #{rem(0)} #{rem(0)} #{rem(12)} #{rem(6)} rgba(46, 46, 46, 0.4);
+        }
+
+        box-shadow: #{rem(0)} #{rem(0)} #{rem(12)} #{rem(6)} rgba(255, 0, 0, 0.4);
+    }
+
+    .filters {
+        color: var(--dark-theme-color-light);
+        
+        &__title {
+            color: var(--dark-theme-color-light);
+        }
+
+        &__filter {
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+
+        &__input {
+            color: var(--dark-theme-color-light);
+            border: 1px solid var(--dark-theme-color-light);
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+
+        &__list {
+            &-item {
+                label {
+                    &::before {
+                        border-color: var(--dark-theme-color-light);
+                    }
+                }
+            }
+        }
+
+        &__hero {
+            background-color: var(--dark-theme-color-dark-gray);
+    
+            &-title {
+                color: var(--dark-theme-color-light);
+            }
+        }
+
+        &__clear {
+            span {
+                color: var(--dark-theme-color-active);
+            }
+        }
+    }
+
+    .search {
+        &__input {
+            background: transparent;
+            color: var(--dark-theme-color-light);
+            caret-color: var(--dark-theme-color-light);
+            border-color: var(--dark-theme-color-light);
+        }
+
+        &--local {
+            .search {
+                &__input {
+                    border-color: transparent;
+                    background-color: var(--dark-theme-color-dark-gray);
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .empty {
+        background-color: rgba($color: #000000, $alpha: .1);
+        
+        &__title {
+            color: var(--dark-theme-color-light);
+        }
+
+        &__image {
+            filter: invert(1);
+            mix-blend-mode: lighten;
+        }
+    }
+    
+    .select-filter {
+        color: var(--dark-theme-color-light);
+        border: 1px solid var(--dark-theme-color-light);
+        background-color: var(--dark-theme-color-dark-gray);
+    }
+
+    .button-change-grid {
+        border: 1px solid var(--dark-theme-color-light);
+
+        &::before, &::after {
+            filter: brightness(0) invert(0.8);
+        }
+    }
+
+    .compare-button, .favourite-button, .cart-button, .search {
+        img {
+            filter: brightness(0) invert(0.8);
+        }
+    }
+
+    .theme-button {
+        filter: brightness(0) invert(0.8);
+    }
+
+    .comparison-button, .favourites-button {
+        border: 1px solid var(--dark-theme-color-light);
+
+        &.disabled {
+            background-color: #502929;
+        }
+
+        img {
+            filter: brightness(0) invert(0.8);
+        }
+    }
+
+    .compare {
+        color: var(--dark-theme-color-light);
+        &__inner {
+            background-color: var(--dark-theme-color-dark);
+        }
+
+        &-item {
+            background-color: var(--dark-theme-color-dark-gray);
+
+            &__price {
+                color: var(--dark-theme-color-light);
+            }
+
+            &__link {
+                color: var(--dark-theme-color-active);
+            }
+        }
+
+        &__empty {
+            color: var(--dark-theme-color-light);
+            background-color: var(--dark-theme-color-dark);
+        }
+    }
+
+    .close {
+        &::before, &::after {
+            background-color: var(--dark-theme-color-light);
+        }
+    }
+
+    .info {
+        &__title {
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+
+        &__accordeon {
+            summary {
+                position: relative;
+                list-style: none;
+            }
+    
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            
+            summary::after {
+                content: '';
+                position: absolute;
+                right: rem(20); 
+                top: 50%;
+                width: rem(10); 
+                height: rem(10); 
+                border: solid var(--dark-theme-color-light); 
+                border-width: 0 rem(2) rem(2) 0; 
+                transform: translateY(-50%) rotate(45deg);
+                transition: all var(--transition-duration);
+            }
+            
+            &[open] summary::after {
+                transform: rotate(225deg);
+            }
+        }
+
+        &__row {
+            border-bottom: 2px dashed var(--dark-theme-color-dark-gray);
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        background-color: black;
+        border-color: var(--dark-theme-color-dark);
+        background-color: var(--dark-theme-color-dark-gray);
+
+        &::after {
+            border-color: var(--dark-theme-color-light); 
+        }
+    }
+
+    .favourites {
+        color: var(--dark-theme-color-light);
+        background-color: var(--dark-theme-color-dark);
+        
+        &-item {
+            &__inner {
+                background-color: var(--dark-theme-color-dark-gray);
+            }
+
+            &__price {
+                color: var(--dark-theme-color-light);
+            }
+
+            &__link {
+                color: var(--dark-theme-color-active);
+            }
+        }
+    }
+
+    .overlay {
+        background-color: rgba(#000000, 0.8);
+    }
+
+    .cart {
+        color: var(--dark-theme-color-light);
+        background-color: var(--dark-theme-color-dark);
+
+        &-item {
+            &__inner {
+                background-color: var(--dark-theme-color-dark-gray);
+            }
+
+            &__link {
+                color: var(--dark-theme-color-active);
+            }
+
+            &__price {
+                color: var(--dark-theme-color-light);
+            }
+        }
+
+        &__total {
+            &-title {
+                span {
+                    color: var(--dark-theme-color-light);
+                }
+            }
+        }
+    }
+
+    .counter {
+        background-color: var(--dark-theme-color-dark);
+
+        &__plus, &__minus {
+            color: var(--dark-theme-color-light);
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+    }
+
+    .pagination {
+        background-color: var(--dark-theme-color-dark-gray);
+
+        &__item, &__button-prev, &__button-next {
+            color: var(--dark-theme-color-light);
+            border-color: var(--dark-theme-color-light);
+
+            @include hover {
+                background-color: var(--dark-theme-color-dark);
+            }
+
+            &.is-active {
+                background-color: var(--dark-theme-color-dark);
+            }
+        }
+
+        &__button-prev, &__button-next {
+            img {
+                filter: brightness(0) invert(0.8);
+            }
+        }
+    }
+
+    .theme-button {
+        &::before, &::after {
+            transition: all .3s ease;
+        }
+    
+        &::before {
+            background-image: url('/public/icons/dark-theme.svg');
+            transform: translate(-50%, -200%);
+        }
+    
+        &::after {
+            background-image: url('/public/icons/light-theme.svg');
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .footer {
+        background-color: #0f0f0f;
+
+        &__main {
+            background-color: #161616;
+        }
+
+        &__menu-link {
+            color: var(--dark-theme-color-gray);
+        }
+    }
+
+    .mobile-overlay {
+        background-color: var(--dark-theme-color-dark);
+
+        img {
+            filter: brightness(0) invert(0.8);
+        }
+        
+        &__title {
+            color: var(--dark-theme-color-light);
+        }
+
+        &__item {
+            background-color: var(--dark-theme-color-dark);
+            border-color: var(--dark-theme-color-dark-gray);
+        }
+    }
+
+    .burger-button {
+        @include hover {
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+
+        &::before {
+            background-color: var(--dark-theme-color-light);
+            box-shadow: 0 -10px var(--dark-theme-color-light), 0 10px var(--dark-theme-color-light);
+        }
+    }
+
+    // ================= [ Страница товара ] =================
+
+    .product-page {
+        color: var(--dark-theme-color-gray);
+        background-color: var(--dark-theme-color-dark);
+
+        &__title {
+            color: var(--dark-theme-color-light);
+        }
+
+        &__inner {
+            background-color: var(--dark-theme-color-dark);
+        }
+
+        &__nav {
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+
+        &__price {
+            color: var(--dark-theme-color-light);
+        }
+    }
+
+    .gallery {
+        &__mini-row-image-container {
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+        
+        &__main-image-container {
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+    }
+
+    .tabs {
+        &__nav-button {
+            background-color: var(--dark-theme-color-darker-gray);
+            color: var(--dark-theme-color-light);
+
+            &.is-active {
+                background-color: var(--dark-theme-color-dark-gray);
+            }
+        }
+
+        &__content {
+            background-color: var(--dark-theme-color-darker-gray);
+        }
+
+        &__review-slider-title {
+            color: var(--dark-theme-color-light);
+        }
+    }
+    
+    .specifications {
+        &__title {
+            color: var(--dark-theme-color-light);
+            background-color: var(--dark-theme-color-dark-gray);
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@use '../helpers' as *;
+
+.cart {
+    --cart-width: #{rem(650)};
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: calc(var(--cart-width) * -1);
+    transition: right .4s ease-out;
+    width: var(--cart-width);
+    height: 100vh;
+    padding-inline: rem(24);
+    background-color: var(--color-light);
+
+    @include mobile {
+        width: 100%;
+        right: -100%;
+    }
+    
+    &.is-active {
+        right: 0;
+    }
+
+    &__empty {
+        display: none;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    &__inner {
+        right: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    &__title {
+        font-size: rem(30);
+        font-weight: 600;
+        padding-block: rem(20);
+    }
+
+    &__order-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        flex-grow: 1;
+        padding-right: rem(10);
+        height: 1px;
+        overflow-y: auto;
+        row-gap: rem(20);
+    }
+
+
+    &__total {
+        display: flex;
+        padding-block: rem(20);
+
+        &-title {
+            font-size: rem(20);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            @include mobile-s {
+                font-size: 0;
+            }
+
+            .h3 {
+                &:first-child {
+                    margin-left: rem(10);
+
+                    @include mobile-s {
+                        font-size: rem(26);
+                    }
+                }
+            }
+        }
+    }
+
+    &__order-button {
+        margin-left: auto;
+    }
+
+    &__close {
+        right: rem(12);
+    }
+}

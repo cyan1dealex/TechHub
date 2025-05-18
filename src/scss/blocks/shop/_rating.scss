@@ -1,0 +1,60 @@
+@use '../../helpers' as *;
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &__stars {
+        display: flex;
+        justify-content: center;
+
+        & span {
+            padding: 0;
+            font-size: rem(20);
+            line-height: 1;
+            filter: grayscale(0.9);
+            position: relative;
+            display: inline-block;
+            @include square(20px);
+        }
+
+        & > span:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include square(20px);
+            background: url('/icons/rating-star.svg') center no-repeat;
+            filter: grayscale(1);
+        }
+        
+        & > span.active {
+            filter: grayscale(0);
+            
+            &::before {
+                filter: grayscale(0);
+            }
+        }
+
+        & > span.half {
+            filter: none;
+            
+            &::before {
+                filter: grayscale(1);
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include square(20px);
+                background: url('/icons/rating-star.svg') center no-repeat;
+                filter: grayscale(0);
+                clip-path: inset(0 50% 0 0);
+            }
+        }
+    }
+}

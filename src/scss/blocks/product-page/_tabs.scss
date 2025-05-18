@@ -1,0 +1,167 @@
+@use "../../helpers" as *;
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+
+    &__review-hero {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        position: relative;
+        display: inline-flex;
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: rem(3);
+            background-color: rgba($color: #000000, $alpha: .2);
+        }
+
+        &-button {
+            padding-block: rem(14);
+            padding-inline: rem(28);
+
+            @include mobile {
+                padding-inline: rem(16);
+            }
+
+            &.is-active {
+                background-color: var(--color-light);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: rem(3);
+                    background-color: var(--color-cart-button);
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    &__content {
+        background-color: var(--color-light);
+        padding: rem(40);
+
+        @include mobile{
+            padding: rem(20);
+        }
+    }
+
+    &__item {
+        display: none;
+        height: rem(600);
+
+        @include tablet {
+            height: auto;
+        }
+
+        &[data-content="specifications"] {
+            height: auto;
+        }
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        overflow: hidden;
+        
+        &-wrapper {
+            height: 100%;
+        }
+
+        &-slide {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            
+            & img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                padding-bottom: rem(20);
+            }
+        }
+    }
+
+    &__review-slider {
+        width: 100%;
+        overflow: hidden;
+
+        &-wrapper {
+            height: 100%;
+        }
+
+        &-slide {
+            position: relative;
+            padding: rem(20);
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(10);
+            display: flex;
+            justify-content: center;
+
+            @include mobile {
+                padding: rem(10);
+            }
+        }
+
+        &-title {
+            font-size: rem(22);
+            font-weight: 600;
+        }
+
+        &-rate {
+            position: absolute;
+            top: rem(20);
+            right: rem(20);
+        }
+
+        &-text {
+            padding: rem(20);
+        }
+    }
+}
+
+.swiper-pagination, .swiper-review-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(-16);
+}
+
+.swiper-pagination-bullet {
+    width: rem(12);
+    height: rem(12);
+    margin: 0 rem(5);
+    background-color: var(--color-gray);
+    opacity: 0.2;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--color-gray); 
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: var(--color-cart-button);
+}

@@ -1,0 +1,84 @@
+@use "./../helpers" as *;
+
+.favourites-item {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        justify-content: start;
+        column-gap: rem(20);
+        background-color: var(--color-light-gray);
+        border-radius: var(--border-radius);
+        padding: rem(20);
+        height: rem(160);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(20);
+            height: auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        row-gap: rem(4);
+        max-width: rem(400);
+
+        @include mobile {
+            row-gap: rem(10);
+        }
+    }
+
+    &__nav-buttons {
+        margin-top: auto;
+    }
+
+    &__link {
+        font-size: rem(16);
+        color: var(--color-link);
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: rem(18);
+        font-weight: 600;
+        white-space: wrap;
+    }
+
+    &__image-container {
+        @include square(rem(120));
+        align-self: center;
+        padding: rem(10);
+        background-color: var(--color-light);
+        overflow: hidden;
+        border-radius: var(--border-radius);
+
+        img {
+            display: block;
+            margin: auto;
+            width: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        right: rem(20);
+        bottom: rem(20);
+        width: rem(140);
+
+        span {
+            font-size: rem(30);
+        }
+    }
+
+    
+    & .close {
+        right: rem(12);
+        top: rem(12);
+    }
+}

@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.hero {
+    &__inner {
+        @include flex-center;
+        height: fluid(500, 200);
+        overflow: hidden; // На случай если текст будет вылезать
+    }
+}

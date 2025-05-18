@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/scss/main.css">
+    <!-- <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <link src="./node_modules/swiper/swiper-bundle.min.css"></link> -->
+    <script src="./src/js/main.js" type="module"></script>
+    <title>Смартфоны</title>
+</head>
+<body>
+    <div class="preloader"></div>
+    <header class="header">
+        <div class="header__inner container">
+            <a href="/" class="header__logo logo">
+                <img src="/icons/logo.svg" alt="Logo image">
+            </a>
+            <div class="header__search search">
+                <form>
+                    <label class="visually-hidden" for="dataSearch">Поиск товара</label>
+                    <input type="search" placeholder="Поиск товара" class="search__input" id="dataSearch" data-local-search>
+                    <img class="search__input-icon" src="/icons/search.svg" alt="Search Icon">
+                </form>
+            </div>
+            <nav class="header__nav navigation" data-navigation>
+                <button class="header__nav-button theme-button" id="themeButton">
+                </button>
+                
+                <button class="header__nav-button compare-button" id="compareButton">
+                    <img src="/icons/compare.svg" alt="Кнопка открытия сравнения товаров">
+                    <span class="compare-button__current-items visually-hidden" data-current-items-compare></span>
+                </button>
+                
+                <button class="header__nav-button favourite-button" id="favouritesButton">
+                    <img src="/icons/favourites.svg" alt="Кнопка открытия избранных товаров">
+                    <span class="favourite-button__current-items visually-hidden" data-current-items-favourites></span>
+                </button>
+    
+                <button class="header__nav-button cart-button" id="cartButton">
+                    <img src="/icons/cart.svg" alt="Кнопка открытия корзины товаров">
+                    <span class="cart-button__current-items visually-hidden" data-current-items-cart></span>
+                </button>
+            </nav>
+            <button class="header__burger-button burger-button" type="button" data-open-menu-button>
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+        </div>
+    </header>
+    <main class="content">
+        <div class="cart" id="cart">
+            <span class="cart__close close close--huge" data-close-button></span>
+
+            <div class="cart__empty" id="cartEmpty">
+                <div class="empty">
+                    <p class="empty__title">Ваша корзина пустая</p>
+                    <img class="empty__image" src="/gif/icons8-empty-cart.gif" alt="List is empty">
+                </div>
+            </div>
+
+            <div class="cart__inner" id="cartOrder">
+                <p class="cart__title">Корзина</p>
+                <form action="server.php" method="post" class="cart__order-container">
+                    <ul class="cart__list" id="cartOrderList">
+                        
+                    </ul>
+                    <div class="cart__total">
+                        <p class="cart__total-title">
+                            Итого: <span class="h3" data-cart-price></span>
+                        </p>
+                        <button type="submit" class="cart__order-button order-button">
+                            <span>Оформить заказ</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="compare"  data-compare>     
+            <span class="compare__close close close--huge" data-close-button></span>
+
+            <div class="compare__empty" data-compare-empty>
+                <div class="empty">
+                    <p class="empty__title">Добавьте товары в сравнение</p>
+                    <img class="empty__image" src="/gif/icons8-list-is-empty.gif" alt="List is empty">
+                </div>
+            </div>
+            
+            <div class="compare__inner"  data-compare-inner>
+                <p class="compare__title">Сравнение товаров</p>
+                <div class="compare__section">
+                    
+                    <div class="compare__main swiper">
+                        <div class="compare__list swiper-wrapper" data-compare-list>
+                            
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    
+                </div>
+                <div class="compare__info-inner" data-compare-info>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="favourites" id="favourites">
+            <span class="favourites__close close close--huge" data-close-button></span>
+            
+            <div class="favourites__empty" id="favouritesEmpty">
+                <div class="empty">
+                    <p class="empty__title">В списке избранного ничего нет</p>
+                    <img class="empty__image" src="/gif/icons8-heart.gif" alt="List is empty">
+                </div>
+            </div>
+
+            <div class="favourites__inner" id="favouritesOrder">
+                <p class="favourites__title">Избранное</p>
+                <div class="favourites__order-container">
+                    <ul class="favourites__list" id="favouritesOrderList">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span class="overlay" data-close-button data-overlay></span>
+
+        <section class="hero">
+            <div class="hero__inner container">
+                <p class="hero__title typewriter">
+                    <span data-typewriter-text></span>
+                </p>
+            </div>
+        </section>
+
+        <section class="shop" data-category="Смартфоны">
+            <header class="shop__header">
+                <div class="shop__header-inner container">
+                    <h2 class="shop__header-title">Смартфоны</h2>
+                    <div class="shop__header-nav">
+                        <button class="shop__header-button-change-grid button-change-grid" data-change-grid>
+                        </button>
+                        <div class="shop__header-select">
+                            <label for="selectFilter" class="visually-hidden"></label>
+                            <select name="select-filter" id="selectFilter" class="shop__header-select-filter select-filter">
+                                <option value="" class="shop__header-option" disabled selected hidden>Сортировка</option>
+                                <option value="rating" class="shop__header-option">По рейтингу</option>
+                                <option value="ascending" class="shop__header-option">Сначала дешевые</option>
+                                <option value="descending" class="shop__header-option">Сначала дорогие</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="shop__body">
+                <div class="shop__inner container">
+                    <div class="shop__filters filters" data-filters>
+                        <div class="filters__hero">
+                            <p class="filters__hero-title h3">Фильтры</p>                            
+                            <button class="filters__clear" data-button-clear-filters>
+                                <span>Очистить все</span>
+                            </button>
+                        </div>
+                        <!-- <div class="filters__search search search--local">
+                            <form>
+                                <label class="visually-hidden" for="dataLocalSearch">Локальный поиск товара</label>
+                                <input type="search" placeholder="Поиск" class="search__input" data-local-search>
+                                <img class="search__input-icon" src="/icons/search.svg" alt="Search Icon">
+                            </form>
+                        </div> -->
+                        <ul class="filters__list-inner" data-filter-container>
+                        </ul>
+                    </div>
+                    <div class="shop__products products">
+                        <div class="loader" data-products-loader>
+                            <div class="loader__inner">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="products__empty" data-products-empty>
+                            <div class="empty">
+                                <p class="empty__title">Товаров с выбранными фильтрыми нет</p>
+                                <img class="empty__image" src="/gif/icons8-list-is-empty.gif" alt="List is empty">
+                            </div> 
+                        </div>
+                        <div class="products__list-inner">
+                            <ul class="products__list" id="productContainer">
+                            </ul>
+                        </div>
+                        
+                        <div class="products__pagination pagination">
+                            <button class="pagination__button-prev">
+                                <img src="/icons/arrow-left.svg" alt="Arrow left" data-button-prev>
+                            </button>
+                            <ul class="pagination__list" data-pagination>
+                            </ul>
+                            <button class="pagination__button-next" data-button-next>
+                                <img src="/icons/arrow-right.svg" alt="Arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__hero">
+            <div class="footer__hero-inner container">
+                <a href="/" class="footer__logo logo">
+                    <img src="/icons/logo.svg" alt="Logo image">
+                </a>
+                <ul class="footer__soc1als-list soc1als">
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="/icons/icons8-youtube.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="/icons/icons8-vk-circled.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="/icons/icons8-twitter-circled.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="/icons/icons8-facebook-circled.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="/icons/icons8-github.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="/icons/icons8-instagram.svg" alt="Facebook">
+                        </a>
+                    </li>
+                </ul>
+                <form action="" class="footer__contact-us contact-us">
+                    <label class="contact-us__title" for="email">Подписка на акции</label>
+                    <div class="contact-us__input-block">
+                        <input placeholder="Электронная почта" id="email" type="email" class="contact-us__input">
+                        <button type="submit" class="contact-us__button">
+                            <span>Подписаться</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__main-inner container">
+                <nav class="footer__menu">
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Компания</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">О компании</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Новости</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Контакты</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Покупателям</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Как сделать заказ</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Доставка и оплата</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Кредит и рассрочка</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Гарантия</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Помощь</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">FAQ</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Как выбрать смартфон</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Сравнение моделей</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Тех. поддержка</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Контакты</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="tel:375291234567" class="footer__menu-link phone">+375 (29) 123-45-67</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="mailto:info@example.com" class="footer__menu-link email">info@example.com</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link email">г. Гомель, ул. Советская, 102</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-overlay" data-mobile-overlay>
+        <h2 class="mobile-overlay__title">Меню</h2>
+        <button class="close close--huge" type="submit" data-close-menu-button>
+            <span class="visually-hidden">Close navigation menu</span>
+        </button>
+        <ul class="mobile-overlay__list">
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__cart" data-mobile-cart-button-container></div>
+            </li>
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__favourites" data-mobile-favourites-button-container></div>
+            </li>
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__compare" data-mobile-compare-button-container></div>
+            </li>
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__theme" data-mobile-theme-button-container></div>
+            </li>
+            <li class="mobile-overlay__item item-block">
+                <div class="mobile-overlay__filters" data-collapse="close">
+                    <div class="mobile-overlay__filters-title" data-collapse-heading>
+                        <img src="/icons/filters.svg" alt="Filters icon">
+                    </div>
+                    <div class="mobile-overlay__filters-body" data-collapse-content data-mobile-filter-container></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

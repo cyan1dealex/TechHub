@@ -1,0 +1,40 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/buttons';
+@use 'blocks/empty';
+@use 'blocks/socials';
+@use 'blocks/contact-us';
+@use 'blocks/typewriter';
+@use 'blocks/overlay';
+@use 'blocks/cart';
+@use 'blocks/cart-item';
+@use 'blocks/compare';
+@use 'blocks/compare-item';
+@use 'blocks/compare-slider';
+@use 'blocks/favourites';
+@use 'blocks/favourites-item';
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/pagination';
+@use 'blocks/shop/rating';
+@use 'blocks/shop/filters';
+@use 'blocks/shop/shop-globals';
+@use 'blocks/shop/shop-header';
+@use 'blocks/shop/shop-products';
+@use 'blocks/shop/product-card';
+@use 'blocks/product-page/product-page';
+@use 'blocks/product-page/gallery';
+@use 'blocks/product-page/tabs';
+@use 'blocks/product-page/specifications';
+@use 'blocks/dark-theme';
+@use 'blocks/footer';
+@use 'blocks/loader';
+@use 'blocks/preloader';
+@use 'blocks/mobile-overlay';
+
+// Пофиксить background
+// Пофиксить паддинги в compare

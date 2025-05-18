@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.overlay {
+    z-index: 50; // Ниже основного контейнера
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#000000, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: all var(--transition-duration) ease-in;
+
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+        transition: all var(--transition-duration) ease-out;
+    }
+}

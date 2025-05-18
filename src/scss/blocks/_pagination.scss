@@ -1,0 +1,50 @@
+@use '../helpers' as *;
+
+.pagination {
+    padding: rem(20);
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(30);
+
+    &__list {
+        display: flex;
+        column-gap: rem(10);
+        flex-wrap: wrap;
+        row-gap: rem(10);
+
+        @include mobile-s {
+            justify-content: center;
+        }
+    }
+
+    &__item, &__button-prev, &__button-next {
+        @include flex-center;
+        @include square(rem(40));
+        border: var(--border);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all var(--transition-duration);
+
+        @include mobile {
+            @include square(rem(34));
+        }
+
+        @include hover {
+            background-color: var(--color-light);
+        }
+
+        &.is-active {
+            background-color: var(--color-light);
+        }
+    }
+
+    &__button-prev, &__button-next {
+        @include square(rem(36));
+
+        @include mobile {
+            @include square(rem(30));
+        }
+    }
+}

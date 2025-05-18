@@ -1,0 +1,75 @@
+@use '../helpers' as *;
+
+@keyframes preloader-loading {
+    0% { opacity: 1; }
+    20% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+@keyframes header-loading {
+    0% { transform: translate(0, -100%); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes header-narrowing {
+    0% { width: 100%; }
+    100% { width: 80%; }
+}
+
+@keyframes shop-loading {
+    0% { transform: translate(0, 100%); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes content-loading {
+    0% { transform: translate(0, 100%); }
+    100% { transform: translate(0, 0); }
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    pointer-events: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 1;
+    }
+}
+
+.is-loading {
+    animation: loading 3s ease-in-out infinite;
+
+    .header, .header-page {
+        animation: header-loading 3s cubic-bezier( 0.23, 1, 0.32, 1 );
+    }
+
+    .shop, .product-page, .footer {
+        animation: shop-loading 3s cubic-bezier( 0.23, 1, 0.32, 1 );
+    }
+
+    .shop__inner {
+        animation: content-loading 2s cubic-bezier( 0.23, 1, 0.32, 1 );
+    }
+
+    .product-page__inner {
+        animation: content-loading 2.5s cubic-bezier( 0.23, 1, 0.32, 1 );
+    }
+
+    .preloader {
+        &::before {
+            animation: preloader-loading 3s cubic-bezier( 0.23, 1, 0.32, 1 );
+        }
+    }
+}
+

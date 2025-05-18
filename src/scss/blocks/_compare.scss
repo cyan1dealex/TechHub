@@ -1,0 +1,183 @@
+@use '../helpers' as *;
+
+.compare {
+    z-index: 10001 !important; // Должен быть выше overlay
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90vw;
+    height: 85vh;
+    visibility: hidden;
+    transition: transform 0.4s ease-out, top 0.4s ease-out, visibility 0s 0.4s;
+
+    @include tablet {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.is-active {
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+        transition: transform 0.4s ease-out, top 0.4s ease-out, visibility 0s;
+    }
+
+    &__empty {
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-light);
+        top: 0;
+        left: 0;
+        border-radius: var(--border-radius);
+
+        .empty {
+            width: 50%;
+        }
+
+        &.is-active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    &__inner {
+        z-index: 10002 !important; // Должен быть выше overlay
+        position: relative;
+        display: none;
+        flex-direction: column;
+        row-gap: rem(30);
+        height: 100%;
+        padding: rem(30);
+        background-color: var(--color-light);
+        border-radius: var(--border-radius);
+        overflow-y: auto;
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    &__title {
+        font-size: rem(24);
+        font-weight: bold;
+    }
+
+    &__section {
+        display: flex;
+        justify-content: end;
+        height: rem(140);
+    }
+
+    &__main {
+        position: relative;
+        width: 80%;
+
+        @include mobile {
+            width: 100% !important;
+        }
+    }
+
+    &__info-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+    }
+}
+
+.info {
+    &__title {
+        padding: rem(16);
+        background-color: var(--color-light-gray);
+        border-radius: var(--border-radius);
+        font-weight: 600;
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        border-bottom: 2px dashed var(--color-light-gray);
+
+        &:first-child {
+            margin-top: rem(30);
+        }
+
+        &:last-child {
+            margin-bottom: rem(30);
+        }
+
+        @include mobile {
+            grid-template-columns: 50% 50%;
+        }
+
+        &-aside {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        &-main {
+            padding-block: rem(14);
+
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.swiper-button {
+    &-next, &-prev {
+        z-index: 10002;
+        position: absolute;
+        @include square(rem(46));
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        background-color: black;
+        border-radius: 50%;
+        border: rem(2) solid var(--color-gray);
+        background-color: var(--color-light);
+        transition: all var(--transition-duration);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 44%;
+            width: rem(10); 
+            height: rem(10); 
+            border: solid var(--color-accent); 
+            border-width: 0 rem(2) rem(2) 0; 
+            transform: translateY(-50%) rotate(-45deg); /* Поворачиваем для создания стрелочки */
+            transition: all var(--transition-duration);
+        }
+    }
+
+    &-prev {
+        transform: translateY(-50%) rotate(-180deg)
+    }
+
+    &-disabled {
+        opacity: 0;
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}

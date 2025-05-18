@@ -1,0 +1,58 @@
+@use "../../helpers" as *;
+
+.gallery {
+    max-width: 40%;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+    }
+
+    &__main-image-container {
+        display: flex;
+        justify-content: center;
+        padding: rem(30);
+        background-color: #fff;
+        border-radius: var(--border-radius);
+
+        img {
+            border-radius: var(--border-radius);
+            align-self: center;
+            width: 60%;
+        }
+    }
+
+    &__mini-row {
+        display: flex;
+        column-gap: rem(20);
+
+        &-image-container {
+            border-radius: var(--border-radius);
+            background-color: #fff;
+            padding: rem(20);
+            
+            @include mobile {
+                padding: rem(10);
+            }
+
+            img {
+                border-radius: var(--border-radius);
+            }
+
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: center;
+        padding: rem(10);
+        background-color: #fff;
+        border-radius: var(--border-radius);
+
+        img {
+            align-self: center;
+            width: 60%;
+        }
+    }
+}
