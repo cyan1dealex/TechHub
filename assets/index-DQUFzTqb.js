@@ -225,7 +225,7 @@
 
                         <div class="favourites-item__nav-buttons">
                             <button class="favourites-item__comparison-button comparison-button" data-compare-button>
-                                <img src="/icons/compare.svg" alt="Compare button" width="38" height="38">
+                                <img src="./icons/compare.svg" alt="Compare button" width="38" height="38">
                             </button>
                         </div>
                     </div>
