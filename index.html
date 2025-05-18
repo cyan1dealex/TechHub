@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смартфоны</title>
+  <script type="module" crossorigin src="/assets/index-C-U1d8NI.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-GFgf1E_N.css">
+</head>
+<body>
+    <div class="preloader"></div>
+    <header class="header">
+        <div class="header__inner container">
+            <a href="/" class="header__logo logo">
+                <img src="data:image/svg+xml,%3csvg%20width='58'%20height='58'%20viewBox='0%200%2058%2058'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.66669%2041.0834L24.1667%2026.5834L9.66669%2012.0834M29%2045.9167H48.3334'%20stroke='%231E1E1E'%20stroke-width='4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Logo image">
+            </a>
+            <div class="header__search search">
+                <form>
+                    <label class="visually-hidden" for="dataSearch">Поиск товара</label>
+                    <input type="search" placeholder="Поиск товара" class="search__input" id="dataSearch" data-local-search>
+                    <img class="search__input-icon" src="data:image/svg+xml,%3csvg%20width='31'%20height='31'%20viewBox='0%200%2031%2031'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.125%2027.125L21.5062%2021.5062M24.5417%2014.2083C24.5417%2019.9153%2019.9153%2024.5417%2014.2083%2024.5417C8.50139%2024.5417%203.875%2019.9153%203.875%2014.2083C3.875%208.50139%208.50139%203.875%2014.2083%203.875C19.9153%203.875%2024.5417%208.50139%2024.5417%2014.2083Z'%20stroke='%231E1E1E'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search Icon">
+                </form>
+            </div>
+            <nav class="header__nav navigation" data-navigation>
+                <button class="header__nav-button theme-button" id="themeButton">
+                </button>
+                
+                <button class="header__nav-button compare-button" id="compareButton">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%3e%3cpath%20fill='currentColor'%20d='M20%2016a5%205%200%200%200%2010%200a1%201%200%200%200-.105-.447l-3.999-7.997a.891.891%200%200%200-.045-.081A1%201%200%200%200%2025%207h-6.178A3.016%203.016%200%200%200%2017%205.184V2h-2v3.184A3.016%203.016%200%200%200%2013.178%207H7a1%201%200%200%200-.894.553l-4%208A1%201%200%200%200%202%2016a5%205%200%200%200%2010%200a1%201%200%200%200-.105-.447L8.618%209h4.56A3.015%203.015%200%200%200%2015%2010.815V28H6v2h20v-2h-9V10.816A3.016%203.016%200%200%200%2018.822%209h4.56l-3.277%206.553A1%201%200%200%200%2020%2016M7%2019a2.996%202.996%200%200%201-2.815-2h5.63A2.996%202.996%200%200%201%207%2019m2.382-4H4.618L7%2010.236ZM16%209a1%201%200%201%201%201-1a1%201%200%200%201-1%201m9%2010a2.996%202.996%200%200%201-2.815-2h5.63A2.996%202.996%200%200%201%2025%2019m0-8.764L27.382%2015h-4.764Z'/%3e%3c/svg%3e" alt="Кнопка открытия сравнения товаров">
+                    <span class="compare-button__current-items visually-hidden" data-current-items-compare></span>
+                </button>
+                
+                <button class="header__nav-button favourite-button" id="favouritesButton">
+                    <img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M34.7335%207.68332C33.8822%206.83167%2032.8715%206.15607%2031.759%205.69513C30.6466%205.23419%2029.4543%204.99695%2028.2501%204.99695C27.046%204.99695%2025.8536%205.23419%2024.7412%205.69513C23.6288%206.15607%2022.618%206.83167%2021.7668%207.68332L20.0001%209.44999L18.2334%207.68332C16.514%205.96384%2014.1818%204.99784%2011.7501%204.99784C9.3184%204.99784%206.98627%205.96384%205.26678%207.68332C3.5473%209.40281%202.5813%2011.7349%202.5813%2014.1667C2.5813%2016.5984%203.5473%2018.9305%205.26678%2020.65L20.0001%2035.3833L34.7335%2020.65C35.5851%2019.7987%2036.2607%2018.788%2036.7216%2017.6756C37.1826%2016.5632%2037.4198%2015.3708%2037.4198%2014.1667C37.4198%2012.9625%2037.1826%2011.7702%2036.7216%2010.6577C36.2607%209.5453%2035.5851%208.53458%2034.7335%207.68332Z'%20stroke='%231E1E1E'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Кнопка открытия избранных товаров">
+                    <span class="favourite-button__current-items visually-hidden" data-current-items-favourites></span>
+                </button>
+    
+                <button class="header__nav-button cart-button" id="cartButton">
+                    <img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.66675%201.6665H8.33341L12.8001%2023.9832C12.9525%2024.7505%2013.3699%2025.4398%2013.9793%2025.9303C14.5887%2026.4209%2015.3512%2026.6815%2016.1334%2026.6665H32.3334C33.1156%2026.6815%2033.8781%2026.4209%2034.4875%2025.9303C35.0969%2025.4398%2035.5143%2024.7505%2035.6667%2023.9832L38.3334%209.99984H10.0001M16.6667%2034.9998C16.6667%2035.9203%2015.9206%2036.6665%2015.0001%2036.6665C14.0796%2036.6665%2013.3334%2035.9203%2013.3334%2034.9998C13.3334%2034.0794%2014.0796%2033.3332%2015.0001%2033.3332C15.9206%2033.3332%2016.6667%2034.0794%2016.6667%2034.9998ZM35.0001%2034.9998C35.0001%2035.9203%2034.2539%2036.6665%2033.3334%2036.6665C32.4129%2036.6665%2031.6667%2035.9203%2031.6667%2034.9998C31.6667%2034.0794%2032.4129%2033.3332%2033.3334%2033.3332C34.2539%2033.3332%2035.0001%2034.0794%2035.0001%2034.9998Z'%20stroke='%231E1E1E'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Кнопка открытия корзины товаров">
+                    <span class="cart-button__current-items visually-hidden" data-current-items-cart></span>
+                </button>
+            </nav>
+            <button class="header__burger-button burger-button" type="button" data-open-menu-button>
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+        </div>
+    </header>
+    <main class="content">
+        <div class="cart" id="cart">
+            <span class="cart__close close close--huge" data-close-button></span>
+
+            <div class="cart__empty" id="cartEmpty">
+                <div class="empty">
+                    <p class="empty__title">Ваша корзина пустая</p>
+                    <img class="empty__image" src="/assets/icons8-empty-cart-CDT_uOt6.gif" alt="List is empty">
+                </div>
+            </div>
+
+            <div class="cart__inner" id="cartOrder">
+                <p class="cart__title">Корзина</p>
+                <form action="server.php" method="post" class="cart__order-container">
+                    <ul class="cart__list" id="cartOrderList">
+                        
+                    </ul>
+                    <div class="cart__total">
+                        <p class="cart__total-title">
+                            Итого: <span class="h3" data-cart-price></span>
+                        </p>
+                        <button type="submit" class="cart__order-button order-button">
+                            <span>Оформить заказ</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="compare"  data-compare>     
+            <span class="compare__close close close--huge" data-close-button></span>
+
+            <div class="compare__empty" data-compare-empty>
+                <div class="empty">
+                    <p class="empty__title">Добавьте товары в сравнение</p>
+                    <img class="empty__image" src="data:image/gif;base64,R0lGODlhMgAyAPcBAAAAAAD/AAYGBiMjI09PT6CgoOLi4uPj4+/v7////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBAABACwAAAAAMgAyAIcAAAAA/wAGBgYjIyNPT0+goKDi4uLj4+Pv7+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8I/wATCBxIsKDBgwgTKlzIsKFDgQAACIgokeLEiBcrYrTIcaNDiiBDihxJkqLDiQ9TIoj4EUDKhytdNmT5siEClDNl1lwY86TOnQl75gTKkyZDo0QP3vypEGnSgkIZ4nxqMOpCp1QFWm3KNGuCpS29QsWKcKrYr2QPpn26NeHapGCHntX6lqBZsW0R1gWaV23XrHGP/qXa1+Bdr4UL7t2ZmODimoGvDmb7+DDgx49fNh6YWaVlv3PpTi74mfJox6f5Yk7NuLRi1pArw9a8+mnJ2kk16naN2vbPAwMADDjg0/dA4AKGP+wMOgFw4cSXz9YrwPmA5NGl+36u/CVvwde7vx+MiKC8+fPo05enKH787o7vN2Js7/62fYsGQuvfnzQgACH5BAUEAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBQABACwxADEAAQABAAAIBAADBAQAIfkEBQQAAQAsMQAxAAEAAQAACAQAAwQEACH5BAUEAAEALA8AEwADAAIAAAgHAAEIFCAwIAAh+QQFBAABACwVABMABAACAAAICgABCCQgUACBgAAAIfkEBQQAAQAsGAATAAgAAgAACA0AAQgcCKDAQAEDCwQEACH5BAUEAAEALB8AEwAEAAIAAAgIAAEIBCBgYEAAIfkEBQUAAQAsDwAZAAMAAgAACAcAAQgUKCAgACH5BAUEAAEALBUAGQAEAAIAAAgIAAEIJCBgYEAAIfkEBQQAAQAsGAAZAAgAAgAACA4AAQgcCKAAAAEDERYICAAh+QQFBAABACwfABkABAACAAAICAABCBwoAEBAACH5BAUEAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBAABACwxADEAAQABAAAIBAADBAQAIfkEBQUAAQAsMQAxAAEAAQAACAQAAwQEACH5BAUEAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBAABACwxADEAAQABAAAIBAADBAQAIfkEBQQAAQAsMQAxAAEAAQAACAQAAwQEACH5BAUEAAEALB8AGQAEAAIAAAgIAAskGChwYEAAIfkEBQQAAQAsGAAZAAgAAgAACAwACSQYSDCBwIIDAwIAIfkEBQUAAQAsFQAZAAQAAgAACAcAEwgcKDAgACH5BAUEAAEALA8AGQADAAIAAAgGABMIHBgQACH5BAUEAAEALB8AEwAEAAIAAAgIAAskGChwYEAAIfkEBQQAAQAsGAATAAgAAgAACAwACSQYSDCBwIIDAwIAIfkEBQQAAQAsFQATAAQAAgAACAcAEwgcKDAgACH5BAUEAAEALA8AEwADAAIAAAgGABMIHBgQACH5BAUFAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBQABACwxADEAAQABAAAIBAADBAQAOw==" alt="List is empty">
+                </div>
+            </div>
+            
+            <div class="compare__inner"  data-compare-inner>
+                <p class="compare__title">Сравнение товаров</p>
+                <div class="compare__section">
+                    
+                    <div class="compare__main swiper">
+                        <div class="compare__list swiper-wrapper" data-compare-list>
+                            
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    
+                </div>
+                <div class="compare__info-inner" data-compare-info>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="favourites" id="favourites">
+            <span class="favourites__close close close--huge" data-close-button></span>
+            
+            <div class="favourites__empty" id="favouritesEmpty">
+                <div class="empty">
+                    <p class="empty__title">В списке избранного ничего нет</p>
+                    <img class="empty__image" src="/assets/icons8-heart-CHEEDs18.gif" alt="List is empty">
+                </div>
+            </div>
+
+            <div class="favourites__inner" id="favouritesOrder">
+                <p class="favourites__title">Избранное</p>
+                <div class="favourites__order-container">
+                    <ul class="favourites__list" id="favouritesOrderList">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span class="overlay" data-close-button data-overlay></span>
+
+        <section class="hero">
+            <div class="hero__inner container">
+                <p class="hero__title typewriter">
+                    <span data-typewriter-text></span>
+                </p>
+            </div>
+        </section>
+
+        <section class="shop" data-category="Смартфоны">
+            <header class="shop__header">
+                <div class="shop__header-inner container">
+                    <h2 class="shop__header-title">Смартфоны</h2>
+                    <div class="shop__header-nav">
+                        <button class="shop__header-button-change-grid button-change-grid" data-change-grid>
+                        </button>
+                        <div class="shop__header-select">
+                            <label for="selectFilter" class="visually-hidden"></label>
+                            <select name="select-filter" id="selectFilter" class="shop__header-select-filter select-filter">
+                                <option value="" class="shop__header-option" disabled selected hidden>Сортировка</option>
+                                <option value="rating" class="shop__header-option">По рейтингу</option>
+                                <option value="ascending" class="shop__header-option">Сначала дешевые</option>
+                                <option value="descending" class="shop__header-option">Сначала дорогие</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="shop__body">
+                <div class="shop__inner container">
+                    <div class="shop__filters filters" data-filters>
+                        <div class="filters__hero">
+                            <p class="filters__hero-title h3">Фильтры</p>                            
+                            <button class="filters__clear" data-button-clear-filters>
+                                <span>Очистить все</span>
+                            </button>
+                        </div>
+                        <ul class="filters__list-inner" data-filter-container>
+                        </ul>
+                    </div>
+                    <div class="shop__products products">
+                        <div class="loader" data-products-loader>
+                            <div class="loader__inner">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="products__empty" data-products-empty>
+                            <div class="empty">
+                                <p class="empty__title">Товаров с выбранными фильтрыми нет</p>
+                                <img class="empty__image" src="data:image/gif;base64,R0lGODlhMgAyAPcBAAAAAAD/AAYGBiMjI09PT6CgoOLi4uPj4+/v7////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBAABACwAAAAAMgAyAIcAAAAA/wAGBgYjIyNPT0+goKDi4uLj4+Pv7+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8I/wATCBxIsKDBgwgTKlzIsKFDgQAACIgokeLEiBcrYrTIcaNDiiBDihxJkqLDiQ9TIoj4EUDKhytdNmT5siEClDNl1lwY86TOnQl75gTKkyZDo0QP3vypEGnSgkIZ4nxqMOpCp1QFWm3KNGuCpS29QsWKcKrYr2QPpn26NeHapGCHntX6lqBZsW0R1gWaV23XrHGP/qXa1+Bdr4UL7t2ZmODimoGvDmb7+DDgx49fNh6YWaVlv3PpTi74mfJox6f5Yk7NuLRi1pArw9a8+mnJ2kk16naN2vbPAwMADDjg0/dA4AKGP+wMOgFw4cSXz9YrwPmA5NGl+36u/CVvwde7vx+MiKC8+fPo05enKH787o7vN2Js7/62fYsGQuvfnzQgACH5BAUEAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBQABACwxADEAAQABAAAIBAADBAQAIfkEBQQAAQAsMQAxAAEAAQAACAQAAwQEACH5BAUEAAEALA8AEwADAAIAAAgHAAEIFCAwIAAh+QQFBAABACwVABMABAACAAAICgABCCQgUACBgAAAIfkEBQQAAQAsGAATAAgAAgAACA0AAQgcCKDAQAEDCwQEACH5BAUEAAEALB8AEwAEAAIAAAgIAAEIBCBgYEAAIfkEBQUAAQAsDwAZAAMAAgAACAcAAQgUKCAgACH5BAUEAAEALBUAGQAEAAIAAAgIAAEIJCBgYEAAIfkEBQQAAQAsGAAZAAgAAgAACA4AAQgcCKAAAAEDERYICAAh+QQFBAABACwfABkABAACAAAICAABCBwoAEBAACH5BAUEAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBAABACwxADEAAQABAAAIBAADBAQAIfkEBQUAAQAsMQAxAAEAAQAACAQAAwQEACH5BAUEAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBAABACwxADEAAQABAAAIBAADBAQAIfkEBQQAAQAsMQAxAAEAAQAACAQAAwQEACH5BAUEAAEALB8AGQAEAAIAAAgIAAskGChwYEAAIfkEBQQAAQAsGAAZAAgAAgAACAwACSQYSDCBwIIDAwIAIfkEBQUAAQAsFQAZAAQAAgAACAcAEwgcKDAgACH5BAUEAAEALA8AGQADAAIAAAgGABMIHBgQACH5BAUEAAEALB8AEwAEAAIAAAgIAAskGChwYEAAIfkEBQQAAQAsGAATAAgAAgAACAwACSQYSDCBwIIDAwIAIfkEBQQAAQAsFQATAAQAAgAACAcAEwgcKDAgACH5BAUEAAEALA8AEwADAAIAAAgGABMIHBgQACH5BAUFAAEALDEAMQABAAEAAAgEAAMEBAAh+QQFBQABACwxADEAAQABAAAIBAADBAQAOw==" alt="List is empty">
+                            </div> 
+                        </div>
+                        <div class="products__list-inner">
+                            <ul class="products__list" id="productContainer">
+                            </ul>
+                        </div>
+                        
+                        <div class="products__pagination pagination">
+                            <button class="pagination__button-prev">
+                                <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M25.3333%2016.0001H6.66663M6.66663%2016.0001L16%2025.3334M6.66663%2016.0001L16%206.66675'%20stroke='%231E1E1E'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Arrow left" data-button-prev>
+                            </button>
+                            <ul class="pagination__list" data-pagination>
+                            </ul>
+                            <button class="pagination__button-next" data-button-next>
+                                <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.66663%2016.0001H25.3333M25.3333%2016.0001L16%206.66675M25.3333%2016.0001L16%2025.3334'%20stroke='%231E1E1E'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__hero">
+            <div class="footer__hero-inner container">
+                <a href="/" class="footer__logo logo">
+                    <img src="data:image/svg+xml,%3csvg%20width='58'%20height='58'%20viewBox='0%200%2058%2058'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.66669%2041.0834L24.1667%2026.5834L9.66669%2012.0834M29%2045.9167H48.3334'%20stroke='%231E1E1E'%20stroke-width='4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Logo image">
+                </a>
+                <ul class="footer__soc1als-list soc1als">
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20width='64px'%20height='64px'%3e%3cpath%20d='M56.456,17.442c-0.339-1.44-1.421-2.595-2.866-3.053C49.761,13.174,41.454,12,32,12s-17.761,1.174-21.591,2.389%20c-1.445,0.458-2.527,1.613-2.866,3.053C6.903,20.161,6,25.203,6,32c0,6.797,0.903,11.839,1.544,14.558%20c0.339,1.44,1.421,2.595,2.866,3.053C14.239,50.826,22.546,52,32,52s17.761-1.174,21.591-2.389%20c1.445-0.458,2.527-1.613,2.866-3.053C57.097,43.839,58,38.797,58,32C58,25.203,57.097,20.161,56.456,17.442z%20M27,40V24l14.857,8%20L27,40z'/%3e%3c/svg%3e" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20width='64px'%20height='64px'%3e%3cpath%20d='M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z%20M42.323,43%20c-1.219-3.804-4.257-6.747-8.275-7.147V43h-0.62C22.496,43,16.26,35.492,16,23h5.477c0.18,9.169,4.217,13.053,7.415,13.854V23%20h5.157v7.908c3.158-0.34,6.476-3.944,7.595-7.908h5.157c-0.859,4.885-4.457,8.488-7.016,9.97C42.343,34.171,46.441,37.314,48,43%20H42.323z'/%3e%3c/svg%3e" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20width='64px'%20height='64px'%3e%3cpath%20d='M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z%20M44.927,26.226%20c0.012,0.271,0.017,0.543,0.017,0.816c0,8.34-6.189,17.958-17.51,17.958c-3.476,0-6.711-1.045-9.435-2.835%20c0.482,0.059,0.973,0.089,1.469,0.089c2.884,0,5.538-1.009,7.644-2.702c-2.693-0.051-4.966-1.877-5.749-4.384%20c0.375,0.072,0.761,0.112,1.157,0.112c0.562,0,1.107-0.077,1.622-0.221c-2.816-0.579-4.937-3.13-4.937-6.188%20c0-0.027,0-0.052,0-0.079c0.83,0.472,1.779,0.756,2.788,0.789c-1.651-1.131-2.737-3.063-2.737-5.252%20c0-1.158,0.303-2.242,0.832-3.175c3.037,3.819,7.571,6.333,12.686,6.595c-0.104-0.46-0.159-0.943-0.159-1.438%20c0-3.485,2.755-6.311,6.154-6.311c1.77,0,3.369,0.767,4.492,1.994c1.403-0.284,2.721-0.809,3.909-1.532%20c-0.459,1.474-1.434,2.711-2.706,3.492C45.71,23.8,46.896,23.462,48,22.959C47.175,24.224,46.131,25.335,44.927,26.226z'/%3e%3c/svg%3e" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20width='64px'%20height='64px'%3e%3cpath%20d='M32,6C17.641,6,6,17.641,6,32c0,12.999,9.54,23.769,22,25.693V40h-6v-7h6v-5c0-7,4-11,10-11c3.133,0,5,1,5,1v6h-4%20c-2.86,0-4,2.093-4,4v5h7l-1,7h-6v17.822C47.945,56.334,58,45.344,58,32C58,17.641,46.359,6,32,6z'/%3e%3c/svg%3e" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20width='64px'%20height='64px'%3e%3cpath%20d='M32%206C17.641%206%206%2017.641%206%2032c0%2012.277%208.512%2022.56%2019.955%2025.286-.592-.141-1.179-.299-1.755-.479V50.85c0%200-.975.325-2.275.325-3.637%200-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471%201.625%200%202.857%201.729%203.429%202.623%201.417%202.207%202.938%202.577%203.721%202.577.975%200%201.817-.146%202.397-.426.268-1.888%201.108-3.57%202.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4%200-2.928%201.175-5.619%203.133-7.792C19.333%2023.641%2019%2022.494%2019%2020.625c0-1.235.086-2.751.65-4.225%200%200%203.708.026%207.205%203.338C28.469%2019.268%2030.196%2019%2032%2019s3.531.268%205.145.738c3.497-3.312%207.205-3.338%207.205-3.338.567%201.474.65%202.99.65%204.225%200%202.015-.268%203.19-.432%203.697C46.466%2026.475%2047.6%2029.124%2047.6%2032c0%205.684-4.303%209.181-10.4%2010.4%201.628%201.43%202.6%203.513%202.6%205.85v8.557c-.576.181-1.162.338-1.755.479C49.488%2054.56%2058%2044.277%2058%2032%2058%2017.641%2046.359%206%2032%206zM33.813%2057.93C33.214%2057.972%2032.61%2058%2032%2058%2032.61%2058%2033.213%2057.971%2033.813%2057.93zM37.786%2057.346c-1.164.265-2.357.451-3.575.554C35.429%2057.797%2036.622%2057.61%2037.786%2057.346zM32%2058c-.61%200-1.214-.028-1.813-.07C30.787%2057.971%2031.39%2058%2032%2058zM29.788%2057.9c-1.217-.103-2.411-.289-3.574-.554C27.378%2057.61%2028.571%2057.797%2029.788%2057.9z'/%3e%3c/svg%3e" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="soc1als__item">
+                        <a href="" class="soc1als__link">
+                            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20width='64px'%20height='64px'%3e%3cpath%20d='M%2021.580078%207%20C%2013.541078%207%207%2013.544938%207%2021.585938%20L%207%2042.417969%20C%207%2050.457969%2013.544938%2057%2021.585938%2057%20L%2042.417969%2057%20C%2050.457969%2057%2057%2050.455062%2057%2042.414062%20L%2057%2021.580078%20C%2057%2013.541078%2050.455062%207%2042.414062%207%20L%2021.580078%207%20z%20M%2047%2015%20C%2048.104%2015%2049%2015.896%2049%2017%20C%2049%2018.104%2048.104%2019%2047%2019%20C%2045.896%2019%2045%2018.104%2045%2017%20C%2045%2015.896%2045.896%2015%2047%2015%20z%20M%2032%2019%20C%2039.17%2019%2045%2024.83%2045%2032%20C%2045%2039.17%2039.169%2045%2032%2045%20C%2024.83%2045%2019%2039.169%2019%2032%20C%2019%2024.831%2024.83%2019%2032%2019%20z%20M%2032%2023%20C%2027.029%2023%2023%2027.029%2023%2032%20C%2023%2036.971%2027.029%2041%2032%2041%20C%2036.971%2041%2041%2036.971%2041%2032%20C%2041%2027.029%2036.971%2023%2032%2023%20z'/%3e%3c/svg%3e" alt="Facebook">
+                        </a>
+                    </li>
+                </ul>
+                <form action="" class="footer__contact-us contact-us">
+                    <label class="contact-us__title" for="email">Подписка на акции</label>
+                    <div class="contact-us__input-block">
+                        <input placeholder="Электронная почта" id="email" type="email" class="contact-us__input">
+                        <button type="submit" class="contact-us__button">
+                            <span>Подписаться</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__main-inner container">
+                <nav class="footer__menu">
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Компания</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">О компании</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Новости</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Контакты</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Покупателям</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Как сделать заказ</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Доставка и оплата</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Кредит и рассрочка</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Гарантия</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Помощь</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">FAQ</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Как выбрать смартфон</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Сравнение моделей</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link">Тех. поддержка</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-column">
+                        <a href="/" class="footer__menu-main-link">Контакты</a>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="tel:375291234567" class="footer__menu-link phone">+375 (29) 123-45-67</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="mailto:info@example.com" class="footer__menu-link email">info@example.com</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="/" class="footer__menu-link email">г. Гомель, ул. Советская, 102</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-overlay" data-mobile-overlay>
+        <h2 class="mobile-overlay__title">Меню</h2>
+        <button class="close close--huge" type="submit" data-close-menu-button>
+            <span class="visually-hidden">Close navigation menu</span>
+        </button>
+        <ul class="mobile-overlay__list">
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__cart" data-mobile-cart-button-container></div>
+            </li>
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__favourites" data-mobile-favourites-button-container></div>
+            </li>
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__compare" data-mobile-compare-button-container></div>
+            </li>
+            <li class="mobile-overlay__item">
+                <div class="mobile-overlay__theme" data-mobile-theme-button-container></div>
+            </li>
+            <li class="mobile-overlay__item item-block">
+                <div class="mobile-overlay__filters" data-collapse="close">
+                    <div class="mobile-overlay__filters-title" data-collapse-heading>
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20enable-background='new%200%200%2032%2032'%20id='Editable-line'%20version='1.1'%20viewBox='0%200%2032%2032'%20xml:space='preserve'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cpath%20d='%20M3.241,7.646L13,19v9l6-4v-5l9.759-11.354C29.315,6.996,28.848,6,27.986,6H4.014C3.152,6,2.685,6.996,3.241,7.646z'%20fill='none'%20id='XMLID_6_'%20stroke='%23000000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3c/svg%3e" alt="Filters icon">
+                    </div>
+                    <div class="mobile-overlay__filters-body" data-collapse-content data-mobile-filter-container></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
