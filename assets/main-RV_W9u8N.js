@@ -221,24 +221,24 @@
             <header class="header-page">
                 <div class="header-page__inner container">
                     <a href="/" class="header-page__logo logo">
-                        <img src="/public/icons/logo.svg" alt="Logo image">
+                        <img src="./icons/logo.svg" alt="Logo image">
                     </a>
                     <nav class="header-page__nav navigation" data-navigation>
                         <button class="header-page__nav-button theme-button" id="themeButton">
                         </button>
                         
                         <button class="header-page__nav-button compare-button" id="compareButton">
-                            <img src="/public/icons/compare.svg" alt="Кнопка открытия сравнения товаров">
+                            <img src="./icons/compare.svg" alt="Кнопка открытия сравнения товаров">
                             <span class="compare-button__current-items visually-hidden" data-current-items-compare></span>
                         </button>
                         
                         <button class="header-page__nav-button favourite-button" id="favouritesButton">
-                            <img src="/public/icons/favourites.svg" alt="Кнопка открытия избранных товаров">
+                            <img src="./icons/favourites.svg" alt="Кнопка открытия избранных товаров">
                             <span class="favourite-button__current-items visually-hidden" data-current-items-favourites></span>
                         </button>
             
                         <button class="header-page__nav-button cart-button" id="cartButton">
-                            <img src="/public/icons/cart.svg" alt="Кнопка открытия корзины товаров">
+                            <img src="./icons/cart.svg" alt="Кнопка открытия корзины товаров">
                             <span class="cart-button__current-items visually-hidden" data-current-items-cart></span>
                         </button>
                     </nav>
@@ -254,7 +254,7 @@
                     <div class="cart__empty" id="cartEmpty">
                         <div class="empty">
                             <p class="empty__title">Ваша корзина пустая</p>
-                            <img class="empty__image" src="/public/gif/icons8-empty-cart.gif" alt="List is empty">
+                            <img class="empty__image" src="./gif/icons8-empty-cart.gif" alt="List is empty">
                         </div>
                     </div>
 
@@ -281,7 +281,7 @@
                     <div class="compare__empty" data-compare-empty>
                         <div class="empty">
                             <p class="empty__title">Добавьте товары в сравнение</p>
-                            <img class="empty__image" src="/public/gif/icons8-list-is-empty.gif" alt="List is empty">
+                            <img class="empty__image" src="./gif/icons8-list-is-empty.gif" alt="List is empty">
                         </div>
                     </div>
                     
@@ -445,37 +445,37 @@
                 <div class="footer__hero">
                     <div class="footer__hero-inner container">
                         <a href="/" class="footer__logo logo">
-                            <img src="/public/icons/logo.svg" alt="Logo image">
+                            <img src="./icons/logo.svg" alt="Logo image">
                         </a>
                         <ul class="footer__soc1als-list soc1als">
                             <li class="soc1als__item">
                                 <a href="" class="soc1als__link">
-                                    <img src="/public/icons/icons8-youtube.svg" alt="Facebook">
+                                    <img src="./icons/icons8-youtube.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li class="soc1als__item">
                                 <a href="" class="soc1als__link">
-                                    <img src="/public/icons/icons8-vk-circled.svg" alt="Facebook">
+                                    <img src="./icons/icons8-vk-circled.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li class="soc1als__item">
                                 <a href="" class="soc1als__link">
-                                    <img src="/public/icons/icons8-twitter-circled.svg" alt="Facebook">
+                                    <img src="./icons/icons8-twitter-circled.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li class="soc1als__item">
                                 <a href="" class="soc1als__link">
-                                    <img src="/public/icons/icons8-facebook-circled.svg" alt="Facebook">
+                                    <img src="./icons/icons8-facebook-circled.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li class="soc1als__item">
                                 <a href="" class="soc1als__link">
-                                    <img src="/public/icons/icons8-github.svg" alt="Facebook">
+                                    <img src="./icons/icons8-github.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li class="soc1als__item">
                                 <a href="" class="soc1als__link">
-                                    <img src="/public/icons/icons8-instagram.svg" alt="Facebook">
+                                    <img src="./icons/icons8-instagram.svg" alt="Facebook">
                                 </a>
                             </li>
                         </ul>
