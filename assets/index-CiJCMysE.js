@@ -195,7 +195,7 @@
                 </div>
                 <p class="compare-item__price h3">${w.prices[0]}</p>
             </article>
-        `,v},f=()=>{t.innerHTML="",r.forEach(w=>{const v=h(w);t.append(v)}),a.update()},d=()=>{const w=g(r);i.innerHTML="",w.forEach(v=>{const u=Object.keys(v)[0],m=v[u],x=Object.keys(m[0]).map(L=>`
+        `,v},f=()=>{t.innerHTML="",r.forEach(w=>{const v=h(w);t.append(v)}),a==null||a.forEach(w=>w.update())},d=()=>{const w=g(r);i.innerHTML="",w.forEach(v=>{const u=Object.keys(v)[0],m=v[u],x=Object.keys(m[0]).map(L=>`
                     <div class="info__row">
                         <div class="info__row-aside">${l(L)}</div>
                         <div class="info__row-main swiper">
