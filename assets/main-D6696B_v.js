@@ -399,10 +399,10 @@
 
                                     <div class="product-page__nav-buttons">
                                         <button class="product-page__comparison-button comparison-button" data-compare-button>
-                                            <img src="/public/icons/compare.svg" alt="Compare button" width="38" height="38">
+                                            <img src="./icons/compare.svg" alt="Compare button" width="38" height="38">
                                         </button>
                                         <button class="product-page__favourites-button favourites-button" data-favourites-button>
-                                            <img src="/public/icons/favourites.svg" alt="Favourites button" width="38" height="38">
+                                            <img src="./icons/favourites.svg" alt="Favourites button" width="38" height="38">
                                         </button>
                                     </div>
                                 </div>
