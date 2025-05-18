@@ -6,5 +6,8 @@ export default defineConfig({
     build: {
         outDir: 'dist',   // Папка сборки (по умолчанию 'dist')
         emptyOutDir: true,    // Очищать папку перед сборкой
-    }
+    },
+    server: {
+        open: true,
+    },
 })
