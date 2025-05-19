@@ -374,7 +374,7 @@
                                     <h2 class="product-page__title h3">${r}</h2>
                                     <ul class="product-page__info-list">
                                         <li class="product-page__info-item">
-                                            <p><span>Экран:</span>  ${o.screenDiagonal} " ${o.screenResolution} пикселей,  ${o.screenTechnology} , ${o.frequency} Гц</p>
+                                            <p><span>Экран:</span>  ${o.screenDiagonal} " ${o.screenResolution} пикселей,  ${o.screenTechnology} , ${o.screenRefreshRate} Гц</p>
                                         </li>
                                         <li class="product-page__info-item">
                                             <p><span>Процессор:</span>${c.cpu} , ${c.cores} ядр., ${c.frequency} ГГц</p>
