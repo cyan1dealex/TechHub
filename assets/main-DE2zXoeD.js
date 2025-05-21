@@ -460,7 +460,7 @@
             <footer class="footer">
                 <div class="footer__hero">
                     <div class="footer__hero-inner container">
-                        <a href="/" class="footer__logo logo">
+                        <a href="/TechHub/" class="footer__logo logo">
                             <img src="./icons/logo.svg" alt="Logo image">
                         </a>
                         <ul class="footer__soc1als-list soc1als">
